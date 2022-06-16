@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="/css/mainStyle.css">
+	<meta charset="UTF-8">
+	<title>Elenco buffets</title>
+	<style>
+	body {
+	background-image: url('/images/buffetBG.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	}
+	
+	.topnav {
+	text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+	}
+	
+	.topnav a {
+	color : #c55f20;
+	}
+	
+	h1 {
+	text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+	}
+	</style>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<div class="topnav">
+  <a href="/home">Home</a>
+  <a href="/chefs">Chef</a>
+  <a class = "active" href="/buffets">Buffet</a>
+  <a href="/piatti">Piatti</a>
+  <a href="/ingredienti">Ingredienti</a>
+  <a href="/logout">Logout</a>
+</div>
+<a href="/nuovoBuffet">
+	<button>Nuovo buffet +</button> 
+</a>
+<h1>Buffets</h1>
+<table>
+  <tr>
+    <th>Nome<div><a class="sorter" href="/buffets/ascN"><i class="material-icons">arrow_upward</i></a><a
+     class="sorter" href="/buffets/descN"><i class="material-icons">arrow_downward</i></a></div></th>
+    <th>Chef</th>
+    <th>Descrizione</th>
+  </tr>
+  <tr th:each = "buffet : ${buffets}">
+    <td><a href="buffet.html" th:href="@{'buffets' + '/' + ${buffet.id}}" th:text ="${buffet.nome}"></a></td>
+    <td th:text = "${buffet.chef.cognome}"></td>
+    <td th:text = "${buffet.descrizione}"></td>
+  </tr>
+</table>
+</body>
+</html>

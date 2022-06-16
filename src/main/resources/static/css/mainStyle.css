@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+html {
+	font-family: Poppins;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 1);
+}
+
+.topnav {
+	background-color: transparent;
+	overflow: hidden;
+}
+
+.topnav a {
+	float: left;
+	color: #f4c95d;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	transition-duration: 0.5s;
+}
+
+.topnav a:hover {
+	background-color: #dd7230;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #c55f20;
+	color: #04030f;
+	font-weight: bold;
+}
+h1 {
+	color: #c55f20;
+	text-align: center;
+}
+
+h2 {
+	color: #c55f20;
+}
+
+button {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #f4c95d;
+	font-family: Poppins;
+	font-size: 20px;
+	border: none;
+	transition-duration: 0.5s;
+	margin-left: 1000px;
+}
+
+button:hover {
+	background-color: #c55f20;
+	color: black;
+	font-weight: bold;
+}
+
+.sorter {
+	color: white;
+}
+
+table {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th {
+	font-size: 22px;
+	color: #f4c95d;
+}
+
+th, td {
+	padding: 20px;
+	border-bottom: 1px solid rgba(197, 95, 32, 0.5);
+	transition-duration: 0.5s;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	font-weight: bold;
+}
+
+td {
+	color: rgb(197, 95, 32);
+}
+
+td:hover {
+	background-color: rgba(197, 95, 32, 0.8);
+	color: black;
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+	color: rgba(197, 95, 32, 1);
+}
+
+i {
+	font-size: 30px;
+	color : #c55f20;
+}
+
+td:hover a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+caption {
+	font-size: 30px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Ingrediente</title>
+<link rel="stylesheet" href="/css/mainStyle.css">
+<meta charset="UTF-8">
+	<style>
+	body {
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	}
+	
+	caption {
+	color: #dd7230;
+	}
+	</style>
+</head>
+<body>
+<div class="topnav">
+  <a href="/home">Home</a>
+  <a href="/chefs">Chef</a>
+  <a href="/buffets">Buffet</a>
+  <a href="/piatti">Piatti</a>
+  <a class = "active" href="/ingredienti">Ingredienti</a>
+  <a href="/logout">Logout</a>
+</div>
+<h1 th:text = "${ingrediente.nome}">Nome</h1>
+<h2 th:text = "'Origine: ' + ${ingrediente.origine}">Origine</h2>
+<h2 th:text = "'Descrizione: ' + ${ingrediente.descrizione}">Descrizione</h2>
+</body>
+</html>

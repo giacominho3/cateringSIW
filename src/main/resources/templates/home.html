@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="html://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/css/homeStyle.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>Home</title>
+</head>
+<body>
+<div class="topnav">
+  <a class = "active" href="/home">Home</a>
+  <a href="/chefs">Chef</a>
+  <a href="/buffets">Buffet</a>
+  <a href="/piatti">Piatti</a>
+  <a href="/ingredienti">Ingredienti</a>
+  <a href="/logout">Logout</a>
+</div>
+<h1>Catering <i class="material-icons">restaurant</i></h1>
+<h2 th:text = "'Benvenuto Utente!'"></h2>
+<div id = "flex-container">
+<a href = "/buffets">I buffet</a>
+<a href = "/chefs">Gli chef</a>
+<a href = "/utenti">Gli utenti</a>
+</div>
+</body>
+</html>

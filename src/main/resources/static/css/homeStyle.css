@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+html {
+	font-family: Poppins;
+	background-image: url('/images/cateringBG.png');
+}
+
+::selection {
+  background: rgba(255, 255, 255, 1);
+}
+
+.topnav {
+	background-color: transparent;
+	overflow: hidden;
+}
+
+.topnav a {
+	float: left;
+	color: #04030f;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	font-weight: bold;
+	transition-duration: 0.5s;
+}
+
+.topnav a:hover {
+	background-color: #dd7230;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #c55f20;
+	color: #04030f;
+	font-weight: bold;
+}
+
+h1 {
+	color: #f4c95d;
+	text-align: center;
+	font-size: 35px;
+	text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+h2 {
+	color: #f4c95d;
+	text-align: center;
+	text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+#flex-container {
+	display: flex;
+	border: none;
+	height: 350px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+#flex-container a {
+	flex-grow: 1;
+	background-color: rgba(0, 0, 0, 0.4);
+	margin: 20px;
+	padding-top: 120px;
+	width: 0;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: #e7e393;
+	transition-duration: 0.5s;
+}
+
+#flex-container a:hover {
+	background-color: rgba(133, 77, 39, 0.9);
+	color: black;
+	font-weight: bold;
+	flex-grow: 2;
+}
+
+i {
+	color: #f4c95d;
+}

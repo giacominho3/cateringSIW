@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="html://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="/css/formStyle.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Nuovo piatto</title>
+<style>
+	body {
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	}
+</style>
+</head>
+<body>
+<div class="topnav">
+  <a href="/home">Home</a>
+  <a href="/chefs">Chef</a>
+  <a href="/buffets">Buffet</a>
+  <a class = "active" href="/piatti">Piatti</a>
+  <a href="/ingredienti">Ingredienti</a>
+  <a href="/logout">Logout</a>
+</div>
+<h1>Inserimento nuovo piatto</h1>
+<form th:action="@{/nuovoPiatto}" method="POST" th:object="${piatto}">
+		<div>
+			<div>
+				<span><input type="text" th:field="*{nome}" placeholder="nome" autocomplete="off"/></span>
+			</div>		
+			<div>
+     				<p>Seleziona ingredienti (Scelta Multipla):
+    				<select th:field="*{ingredienti}" multiple="multiple">
+   
+    				<option th:each="ing: ${ings}" th:value="${ing.id}" th:text="${ing.nome}">
+    				</select>
+    				</p>
+			</div>
+			<div>
+				<span><input type="text" th:field="*{descrizione}" placeholder="descrizione" autocomplete="off"/></span>
+			</div>
+			<div>
+				<span><button type="submit">Invio<i class="material-icons">done</i></button></span>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

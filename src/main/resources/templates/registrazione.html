@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="html://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Register</title>
+	<link rel="stylesheet" href="/css/loginStyle.css">
+<style>
+	body {
+	background-color: #f4c95d;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	}
+</style>
+</head>
+
+<body>
+	
+	<div class="container">
+		<div class="form" id="registrazione">
+			<h1>Registration</h1>
+			<div>
+				<form th:action="@{/registrazione}" method="post">
+					<div class="login">
+						<div class="form__input-group">
+							<input id="nome" class="form__input" type="text" th:field="${user.nome}" autofocus
+								placeholder="nome" autocomplete="off" />
+							<span th:if="${#fields.hasErrors('user.nome')}" th:errors="${user.nome}"></span>
+						</div>
+
+						<div class="form__input-group">
+							 <input id="cognome" class="form__input" type="text" th:field="${user.cognome}" autofocus
+								placeholder="cognome" autocomplete="off" />
+							<span th:if="${#fields.hasErrors('user.cognome')}" th:errors="${user.cognome}"></span>
+						</div>
+
+						<div class="form__input-group">
+							<input id="username" class="form__input" type="text" th:field="*{credentials.username}" autofocus placeholder="username"
+									autocomplete="off" />
+							<span th:if="${#fields.hasErrors('credentials.username')}" th:errors="${credentials.username}"></span>
+						</div>
+
+						<div class="form__input-group">
+							<input id="password" class="form__input" type="password" th:field="*{credentials.password}" autofocus placeholder="password"
+									autocomplete="off"/>
+							<span th:if="${#fields.hasErrors('credentials.password')}" th:errors="${credentials.password}"></span>
+						</div>
+					</div>
+					<div class="boxButton">
+						<div>
+							<span><button type="submit">Register</button></span>
+						</div>
+						<div class="loginRegister">	
+							<span>Already registered? <a href="/login">Login
+									here</a></span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

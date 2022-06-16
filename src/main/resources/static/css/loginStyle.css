@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+html {
+	font-family: Poppins;
+	padding: 0; 
+	margin: 0;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+}
+
+.container {
+	
+    padding-top: 0px;
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 70px #854d27;
+    border-radius: var(--border-radius);
+    background: #854d27;
+}
+
+.container,
+.form__input,
+.form__button {
+    font-family: Poppins;
+    padding-top: 0px;
+}
+.form__title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.form__input {
+    display: block;
+    width: 100%;
+    background-color: #dd7230;
+	color: #04030f;
+	padding: 8px;
+	margin: 8px;
+	border: 0;
+	border-bottom: 1px solid #854d27;
+	transition-duration: 0.5s;
+}
+
+.form__input:focus {
+	outline: none;
+	background-color: #e7e393;
+	border: 1px solid #04030f;
+	color: black;
+}
+.form__input-group {
+    margin-bottom: 1rem;
+}
+
+
+::selection {
+	color: #854d27;
+	background: #e7e393;
+}
+
+a {
+	color:#f4c95d; text-decoration: none;
+}
+
+h1 {
+	color: #04030f;
+	font-size: 50px;
+	text-align: center;
+}
+
+h2{
+	color: #04030f;
+	font-size: 40px;
+	text-align: center;
+}
+
+
+div {
+	margin-right: 15px;
+}
+
+.boxButton{
+	text-align: center;
+	/* margin-right: 0px; */
+	width: 106%;
+}
+
+button {
+	/*width: 100%;*/
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #04030f;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: #dd7230;
+}
+
+button:hover {
+	background-color: #e7e393;
+	color: black;
+}
+
+button:active{
+	transform: scale(0.98);
+}
+
+textarea {
+	font-family: inherit;
+}
+
+span {
+	color: #04030f;
+}
+
+.loginRegister{
+
+    padding-top: 10px;
+    border-top-width: 5px;
+    margin-top: 15px;
+}

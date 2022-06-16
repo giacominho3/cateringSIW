@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="html://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="/css/formStyle.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Nuovo ingrediente</title>
+<style>
+	body {
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	}
+
+	</style>
+</head>
+<body>
+<div class="topnav">
+  <a href="/home">Home</a>
+  <a href="/chefs">Chef</a>
+  <a href="/buffets">Buffet</a>
+  <a href="/piatti">Piatti</a>
+  <a class = "active" href="/ingredienti">Ingredienti</a>
+  <a href="/logout">Logout</a>
+</div>
+<h1>Inserimento nuovo ingrediente</h1>
+<form th:action="@{/nuovoIngrediente}" method="POST" th:object="${ingrediente}">
+		<div>
+			<div>
+				<span><input type="text" th:field="*{nome}" placeholder="nome" autocomplete="off"/></span>
+			</div>		
+			<div>
+				<span><input type="text" th:field="*{origine}" placeholder="origine" autocomplete="off"/></span>
+			</div>
+			<div>
+				<span><input type="text" th:field="*{descrizione}" placeholder="descrizione" autocomplete="off"/></span>
+			</div>
+			<div>
+				<span><button type="submit">Invio<i class="material-icons">done</i></button></span>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

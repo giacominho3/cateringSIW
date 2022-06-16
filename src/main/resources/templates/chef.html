@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Chef</title>
+<link rel="stylesheet" href="/css/mainStyle.css">
+<meta charset="UTF-8">
+	<style>
+	body {
+	background-image: url('/images/chefBG.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	}
+	
+	caption {
+	color: #dd7230;
+	}
+	</style>
+</head>
+<body>
+<div class="topnav">
+  <a href="/home">Home</a>
+  <a class = "active" href="/chefs">Chef</a>
+  <a href="/buffets">Buffet</a>
+  <a href="/piatti">Piatti</a>
+  <a href="/ingredienti">Ingredienti</a>
+  <a href="/logout">Logout</a>
+</div>
+<h1 th:text = "${chef.nome} + ' ' + ${chef.cognome}">Nome Cognome</h1>
+<h2 th:text = "'Nazionalità: ' + ${chef.nazionalita}">Nazionalità</h2>
+<div>
+<table>
+<caption>Buffets:</caption>
+	<tr>
+    	<th>Nome</th>
+    	<th>Descrizione</th>
+  	</tr>
+  	<tr th:each = "buffet : ${chef.buffet}">
+  	<td><a th:href="@{'/buffets' + '/' + ${buffet.id}}" th:text ="${buffet.nome}"></a></td>
+  	<td th:text ="${buffet.descrizione}"></td>
+	</tr>
+</table>
+</div>
+</body>
+</html>
